@@ -28,6 +28,7 @@ extern "C" {
 void SetStartTime (void);
 uint32_t GetRunningTime (void);
 void CdspOsAssert (bool condition, uint32_t arg);
+void CdspOsDelay (unsigned int ms);
 	
 
 #ifdef __cplusplus

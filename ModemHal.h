@@ -27,14 +27,8 @@ extern "C" {
 
 #include "Modem.h"
 
-
-ModemErr_e ModemRegisterRxStringCallback(void (*newModemRxStringCallback)(void));
-void ModemOsDelay (unsigned int ms);
 bool IsPwrMonPinSet(void);
 void ModemUsartInit(void);
-void DisableModemUartInterrupt(void);
-void EnableModemUartInterrupt(void);
-void TriggerModemUartTxInterrupt(void);
 void RegModem (Modem* newModem);
 void sendBytesToModem(char* txBuffer, const char* sendBytes, 
 					  uint16_t len, volatile uint16_t* txBufCurrent,
