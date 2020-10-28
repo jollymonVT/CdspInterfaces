@@ -108,7 +108,7 @@ typedef enum
 // Global functions
 
 void LogEnableLevels(LogLevel_t logLevel);
-LogLevel_t LogGetLevels(void);
+uint32_t LogGetLevels(void);
 
 void LogPrintf(LogLevel_t logLevel,
 #if (LOG_FUNCTION_NAME == 1)

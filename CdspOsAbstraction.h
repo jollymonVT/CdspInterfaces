@@ -18,27 +18,16 @@
  * @brief  Header file for modem hardware specific routines
  ******************************************************************************/
 
-#ifndef CELLMODEM_MODEMHAL_H_
-#define CELLMODEM_MODEMHAL_H_
+#ifndef CDSP_OS_ABSTRACTION_H_
+#define CDSP_OS_ABSTRACTION_H__
 
 #ifdef __cplusplus
 extern "C" {
 #endif
 
-#include "Modem.h"
-
-
-ModemErr_e ModemRegisterRxStringCallback(void (*newModemRxStringCallback)(void));
-void ModemOsDelay (unsigned int ms);
-bool IsPwrMonPinSet(void);
-void ModemUsartInit(void);
-void DisableModemUartInterrupt(void);
-void EnableModemUartInterrupt(void);
-void TriggerModemUartTxInterrupt(void);
-void RegModem (Modem* newModem);
-void sendBytesToModem(char* txBuffer, const char* sendBytes, 
-					  uint16_t len, volatile uint16_t* txBufCurrent,
-					  volatile uint16_t* txBufSize);
+void SetStartTime (void);
+uint32_t GetRunningTime (void);
+void CdspOsAssert (bool condition, uint32_t arg);
 	
 
 #ifdef __cplusplus
